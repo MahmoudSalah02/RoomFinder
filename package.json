@@ -1,0 +1,25 @@
+{
+  "name": "roomfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahmoudSalah02/RoomFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MahmoudSalah02/RoomFinder/issues"
+  },
+  "homepage": "https://github.com/MahmoudSalah02/RoomFinder#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15"
+  }
+}
