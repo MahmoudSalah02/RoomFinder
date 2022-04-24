@@ -25,29 +25,29 @@ db.once('open', function() {console.log("Connected to database")});
 app.get('/', async (req, res) => {
     const rooms = await Room.find({});
     res.locals.rooms = rooms;
-    res.render('rooms/index');
+    res.render('Rooms/index');
 });
 
 app.get('/rooms', async (req, res) => {
     const rooms = await Room.find({});
     res.locals.rooms = rooms;
-    res.render('rooms/index');
+    res.render('Rooms/index');
 });
 
 app.get('/rooms/new', (req, res) => {
-    res.render('rooms/new');
+    res.render('Rooms/new');
 })
 
 app.post('/rooms', async (req, res) => {
     const room = new Room(req.body.room);
     await room.save();
-    res.redirect(`/rooms/${room._id}`)
+    res.redirect(`/Rooms/${room._id}`)
 })
 
 app.get('/rooms/:id', async (req, res,) => {
     const room = await Room.findById(req.params.id)
     res.locals.room = room;
-    res.render('rooms/show');
+    res.render('Rooms/show');
 });
 
 const port = process.env.PORT || 3000;
