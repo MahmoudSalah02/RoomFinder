@@ -22,7 +22,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {console.log("we are connected!!!")});
 
 // Routing
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     const rooms = await Room.find({});
     res.locals.rooms = rooms;
     res.render('rooms/index');
