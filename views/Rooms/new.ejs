@@ -1,40 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Room</title>
-</head>
-
-<body>
-    <form method="POST" action="/rooms">
-        <div>
-            <label for="roomNumber">Number</label>
-            <input type="number" id="roomNumber" name="room[number]">
-        </div>
-        <div>
-            <label for="roomPrice">Price</label>
-            <input type="number" id="roomPrice" name="room[price]">
-        </div>
-        <div>
-            <label for="roomBuilding">Building</label>
-            <input type="String" id="roomBuilding" name="room[building]">
-        </div>
-        <div>
-            <label for="roomImage">Image</label>
-            <input type="String" id="roomImage" name="room[image]">
-        </div>
-        <div>
-            <label for="roomRating">Rating</label>
-            <input type="number" id="roomRating" name="room[rating]">
-        </div>
-        <div>
-            <label for="roomDescription">Description</label>
-            <textarea name="room[description]" id="roomDescription" cols="30" rows="10">
-            </textarea>
-        </div>
-        <button>Submit</button>
-    </form>
-</body>
-</html>
+<% layout('layouts/boilerplate')%>
+<form method="POST" action="/rooms">
+    <div>
+        <label for="roomNumber">Number</label>
+        <input type="number" id="roomNumber" name="room[number]">
+    </div>
+    <div>
+        <label for="roomPrice">Price</label>
+        <input type="number" id="roomPrice" name="room[price]">
+    </div>
+    <div>
+        <label for="roomBuilding">Building</label>
+        <input type="String" id="roomBuilding" name="room[building]">
+    </div>
+    <div>
+        <label for="roomImage">Image</label>
+        <input type="String" id="roomImage" name="room[image]">
+    </div>
+    <div>
+        <label for="roomRating">Rating</label>
+        <input type="number" id="roomRating" name="room[rating]">
+    </div>
+    <div>
+        <label for="roomDescription">Description</label>
+        <textarea name="room[description]" id="roomDescription" cols="30" rows="10">
+        </textarea>
+    </div>
+    <button>Submit</button>
+</form>
