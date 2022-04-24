@@ -1,5 +1,92 @@
 <% layout('layouts/boilerplate')%>
-<form method="POST" action="/rooms">
+
+<div class="row p-5">
+    <h1 class="text-center">New Room</h1>
+    <div class="col-6 offset-3">
+        <form class="needs-validation" action="/rooms" method="POST" novalidate>
+            <div class="form-row">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="roomNumber">Number</label>
+                        <input type="number" class="form-control" id="roomNumber" required min="0" max="2000">
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 mb-3">
+                        <label for="roomPrice">Price</label>
+                        <input type="number" class="form-control" id="roomPrice" required min="0" max="100000">
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="roomBuilding">Building</label>
+                        <input type="text" class="form-control" id="roomBuilding" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="roomRating">Rating (1-5)</label>
+                        <input type="number" class="form-control" id="roomRating" required min="1" max="5">
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="roomImage">Image URL</label>
+                    <input type="text" class="form-control" id="roomImage" required>
+                    <div class="valid-feedback">
+                    Looks good!
+                    </div>
+                </div>
+            
+
+                <div class="col-md-8 mb-3">
+                    <label for="roomReview">Review</label>
+                    <textarea name="room[review]" id="roomReview" cols="50" rows="10" required></textarea>
+                    <div class="valid-feedback">
+                    Looks good!
+                    </div>
+                </div>   
+            </div> 
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
+    </script>
+
+
+
+<!-- <form method="POST" action="/rooms">
     <div>
         <label for="roomNumber">Number</label>
         <input type="number" id="roomNumber" name="room[number]">
@@ -21,9 +108,9 @@
         <input type="number" id="roomRating" name="room[rating]">
     </div>
     <div>
-        <label for="roomDescription">Description</label>
-        <textarea name="room[description]" id="roomDescription" cols="30" rows="10">
+        <label for="roomReview">Description</label>
+        <textarea name="room[review]" id="roomReview" cols="30" rows="10">
         </textarea>
     </div>
     <button>Submit</button>
-</form>
+</form> -->

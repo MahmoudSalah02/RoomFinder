@@ -1,8 +1,21 @@
 <% layout('layouts/boilerplate')%>
-<h1>All Rooms!</h1>
-<a href="/rooms/new">Add Room</a>
-<ul>
-    <% for (let room of rooms) { %>
-        <li><a href="/rooms/<%= room._id %>"><%= room.number %></a></li>
-    <% } %>
-</ul>
+<h1>Rooms Available</h1>
+<% for (let room of rooms){%>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="rounded float-left img-fluid" alt="" src="<%=room.image%>">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><%= room.building %></h5>
+                    <p class="card-text"><%= room.review %></p>
+                    <a class="btn btn-primary" href="/rooms/<%=room._id%>">Details</a>
+                    <p class="card-text">
+                        <small class="text-muted">Room #<%= room.number%></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<% }%>
