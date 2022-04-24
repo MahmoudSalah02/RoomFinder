@@ -23,7 +23,9 @@ db.once('open', function() {console.log("we are connected!!!")});
 
 // Routing
 app.get('/', (req, res) => {
-    res.send("Welcome to RoomFinder!")
+    const rooms = await Room.find({});
+    res.locals.rooms = rooms;
+    res.render('rooms/index');
 });
 
 app.get('/rooms', async (req, res) => {
