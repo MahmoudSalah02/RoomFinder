@@ -48,9 +48,8 @@ app.get('/rooms/:id', async (req, res,) => {
     res.render('rooms/show');
 });
 
-const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
-app.listen(port, host, function() {
-    console.log("Server started.......");
-  });
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`);
+});
