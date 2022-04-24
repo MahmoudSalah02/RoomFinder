@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="roomNumber">Number</label>
-                        <input type="number" class="form-control" id="roomNumber" required min="0" max="2000">
+                        <input type="number" class="form-control" id="roomNumber" name="room[number]" required min="0" max="2000">
                         <div class="valid-feedback">
                         Looks good!
                         </div>
@@ -16,7 +16,7 @@
             
                     <div class="col-md-6 mb-3">
                         <label for="roomPrice">Price</label>
-                        <input type="number" class="form-control" id="roomPrice" required min="0" max="100000">
+                        <input type="number" class="form-control" id="roomPrice" required min="0" name="room[price]" max="100000">
                         <div class="valid-feedback">
                         Looks good!
                         </div>
@@ -26,14 +26,14 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="roomBuilding">Building</label>
-                        <input type="text" class="form-control" id="roomBuilding" required>
+                        <input type="text" class="form-control" id="roomBuilding" name="room[building]" required>
                         <div class="valid-feedback">
                         Looks good!
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="roomRating">Rating (1-5)</label>
-                        <input type="number" class="form-control" id="roomRating" required min="1" max="5">
+                        <input type="number" class="form-control" id="roomRating" name="room[rating]" required min="1" max="5">
                         <div class="valid-feedback">
                         Looks good!
                         </div>
@@ -42,7 +42,7 @@
 
                 <div class="col-md-12 mb-3">
                     <label for="roomImage">Image URL</label>
-                    <input type="text" class="form-control" id="roomImage" required>
+                    <input type="text" class="form-control" id="roomImage" name="room[image]" required>
                     <div class="valid-feedback">
                     Looks good!
                     </div>
