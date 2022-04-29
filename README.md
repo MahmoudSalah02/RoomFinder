@@ -1,6 +1,7 @@
 # RoomFinder
 
 ## Available at: https://room-finder-2.herokuapp.com/rooms
+## Demo Video: https://drive.google.com/file/d/1GVQrXmdLFhlykMmR_MPpMW4xVJ-qQmqV/view?usp=sharing (Brandeis Username Needed)
 
 RoomFiinder allows students to post pictures of their room and see other people's rooms to help decide which room to choose next semester.
 
