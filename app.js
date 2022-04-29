@@ -3,6 +3,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Room = require('./models/room');
 const ejsMate = require('ejs-mate');
+const dotenv = require("dotenv")
+dotenv.config()
 
 const app = express();
 
@@ -11,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }));
 
-const url = "mongodb+srv://mahmoud:1234@cluster0.khpxz.mongodb.net/roomsDB?retryWrites=true&w=majority"
+const url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.khpxz.mongodb.net/roomsDB?retryWrites=true&w=majority`
 mongoose.connect( url, { 
     useNewUrlParser: true,
     useUnifiedTopology: true
