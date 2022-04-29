@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }));
 
-const url = `mongodb+srv://mahmoud:1234@cluster0.khpxz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.khpxz.mongodb.net/roomsDB?retryWrites=true&w=majority`
 
 mongoose.connect( url, { 
     useNewUrlParser: true,
